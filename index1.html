@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Final Assignment</title>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\WEB DEVELOPMENT\COURSERA\CSS\index1_css.css">
+    <script>
+      function firstname1(){
+        var fname = document.getElementById("firstname").value;
+        if(fname.length=="")
+        {
+          document.getElementById("msg1").innerHTML="Please enter your name";
+        }
+        else
+        {
+          document.getElementById("msg1").innerHTML="Input accepted";
+        }
+      }
+      function secondname1(){
+        var sname = document.getElementById("secondname").value;
+        if(sname.length=="")
+        {
+          document.getElementById("msg2").innerHTML="Please enter your name";
+        }
+        else
+        {
+          document.getElementById("msg2").innerHTML="Input accepted";
+        }
+      }
+      function validate_email(){
+        var eid=document.getElementById("email").value;
+        if(eid!="")
+        {
+          document.getElementById("msg3").innerHTML="Email Accepted";
+        }
+        else
+        {
+          document.getElementById("msg3").innerHTML="Enter a Valid Email";
+        }
+
+      }
+
+    </script>
+
+  </head>
+  <body>
+    <p class="para">This webpage is about complete details of a person.This form is to know more about the person's interests according to their age.This helps me to get to know the mentality of a person belonging to certain age group like "Kid","Teen","Adult".This form also tries to find the interests of people in the mentioned group of people.I hope this form helps me to get a clear understanding of different mindsets,likes and dislikes of people.</p> <!--description of the webpage-->
+    <img class="center" src="https://pngimg.com/uploads/welcome/welcome_PNG27.png" alt="welcome image"  >
+      <form class="formclass">
+        <strong>First Name: </strong><input type="text" id="firstname" value="" placeholder="enter your firstname" onblur="firstname1();" required><span id="msg1"></span><br>
+        <br><strong>Second Name: </strong><input type="text" id="secondname" value="" placeholder="enter your secondname" onblur="secondname1();" required><span id="msg2"></span><br>
+        <br><strong>Email: </strong><input type="text" id="email" value="" placeholder="enter your email id" required onblur="validate_email();"><span id="msg3"></span><br>
+        <br><strong>Password: </strong><input type="password" id="password" value="" onblur="validate_password"><br>
+        <br><strong>Age </strong> <br><br>
+        <input type="radio" name="age" value="kid">Kid
+        <input type="radio" name="age" value="teen">Teen
+        <input type="radio" name="age" value="adult">Adult
+        <br><br>
+        <strong>Favorite Genre </strong> <br><br>
+        <input type="checkbox" name="genre" value="romance">Romace <br>
+        <input type="checkbox" name="genre" value="comedy">Comedy <br>
+        <input type="checkbox" name="genre" value="thriller">Thriller <br>
+        <input type="checkbox" name="genre" value="horror">Horror <br>
+        <input type="checkbox" name="genre" value="family">Family <br><br>
+        <strong>Tell Me About Yourself </strong><br><br>
+        <textarea name="yourself" rows="8" cols="80"></textarea><br>
+        <button type="button" name="value" onclick="alert('Your Details Has been submitted')">Click Me</button>
+        
+        <!-- outline of the webpage-->
+
+
+      </form>
+
+  </body>
+</html>
